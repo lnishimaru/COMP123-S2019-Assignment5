@@ -32,5 +32,16 @@ namespace DollarComputers
             ManufacturerResultLabel.Text = Program.computers.Manufacturer;
             ModelResultLabel.Text = Program.computers.Model;
         }
+
+        private void CancelProductInfoButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void NextProductInfoButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.ORDER_FORM].Show();
+            this.Hide();
+        }
     }
 }

@@ -36,7 +36,7 @@
             // 
             // FinishOrderButton
             // 
-            this.FinishOrderButton.Location = new System.Drawing.Point(666, 502);
+            this.FinishOrderButton.Location = new System.Drawing.Point(890, 670);
             this.FinishOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.FinishOrderButton.Name = "FinishOrderButton";
             this.FinishOrderButton.Size = new System.Drawing.Size(105, 40);
@@ -46,23 +46,25 @@
             // 
             // CancelOrderButton
             // 
-            this.CancelOrderButton.Location = new System.Drawing.Point(559, 502);
+            this.CancelOrderButton.Location = new System.Drawing.Point(783, 670);
             this.CancelOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelOrderButton.Name = "CancelOrderButton";
             this.CancelOrderButton.Size = new System.Drawing.Size(105, 40);
             this.CancelOrderButton.TabIndex = 7;
             this.CancelOrderButton.Text = "Cancel";
             this.CancelOrderButton.UseVisualStyleBackColor = true;
+            this.CancelOrderButton.Click += new System.EventHandler(this.CancelOrderButton_Click);
             // 
             // BackOrderButton
             // 
-            this.BackOrderButton.Location = new System.Drawing.Point(451, 502);
+            this.BackOrderButton.Location = new System.Drawing.Point(675, 670);
             this.BackOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackOrderButton.Name = "BackOrderButton";
             this.BackOrderButton.Size = new System.Drawing.Size(105, 40);
             this.BackOrderButton.TabIndex = 9;
             this.BackOrderButton.Text = "Back";
             this.BackOrderButton.UseVisualStyleBackColor = true;
+            this.BackOrderButton.Click += new System.EventHandler(this.BackOrderButton_Click);
             // 
             // OrderForm
             // 
