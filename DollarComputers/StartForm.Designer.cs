@@ -40,7 +40,7 @@
             // SelectLabel
             // 
             this.SelectLabel.AutoSize = true;
-            this.SelectLabel.Location = new System.Drawing.Point(245, 51);
+            this.SelectLabel.Location = new System.Drawing.Point(336, 51);
             this.SelectLabel.Name = "SelectLabel";
             this.SelectLabel.Size = new System.Drawing.Size(398, 36);
             this.SelectLabel.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // StartNewOrderButton
             // 
-            this.StartNewOrderButton.Location = new System.Drawing.Point(251, 306);
+            this.StartNewOrderButton.Location = new System.Drawing.Point(366, 401);
             this.StartNewOrderButton.Name = "StartNewOrderButton";
             this.StartNewOrderButton.Size = new System.Drawing.Size(298, 55);
             this.StartNewOrderButton.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // OpenSavedOrder
             // 
-            this.OpenSavedOrder.Location = new System.Drawing.Point(251, 378);
+            this.OpenSavedOrder.Location = new System.Drawing.Point(366, 473);
             this.OpenSavedOrder.Name = "OpenSavedOrder";
             this.OpenSavedOrder.Size = new System.Drawing.Size(298, 55);
             this.OpenSavedOrder.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(251, 453);
+            this.ExitButton.Location = new System.Drawing.Point(366, 548);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(298, 55);
             this.ExitButton.TabIndex = 3;
@@ -79,7 +79,7 @@
             // CartPictureBox
             // 
             this.CartPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("CartPictureBox.Image")));
-            this.CartPictureBox.Location = new System.Drawing.Point(300, 112);
+            this.CartPictureBox.Location = new System.Drawing.Point(415, 154);
             this.CartPictureBox.Name = "CartPictureBox";
             this.CartPictureBox.Size = new System.Drawing.Size(200, 178);
             this.CartPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(1006, 721);
             this.ControlBox = false;
             this.Controls.Add(this.CartPictureBox);
             this.Controls.Add(this.ExitButton);

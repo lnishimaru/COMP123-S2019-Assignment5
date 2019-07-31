@@ -8,6 +8,8 @@ namespace DollarComputers
 {
     static class Program
     {
+        public static Computers computers;
+        public static ComputersFields computerFields;
         public static Dictionary<FormName, Form> Forms;
         /// <summary>
         /// The main entry point for the application.
@@ -19,7 +21,10 @@ namespace DollarComputers
             Application.SetCompatibleTextRenderingDefault(false);
 
             // create an instance of the Forms Dictionary 
+            computers = new Computers();
+
             Forms = new Dictionary<FormName, Form>();
+
             Forms.Add(FormName.SPLASH_SCREEN, new SplashScreen());
             Forms.Add(FormName.START_FORM, new StartForm());
             Forms.Add(FormName.SELECT_FORM, new SelectForm());

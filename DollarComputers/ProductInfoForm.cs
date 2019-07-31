@@ -21,5 +21,16 @@ namespace DollarComputers
         {
             Application.Exit();
         }
+
+        private void ProductInfoForm_Activated(object sender, EventArgs e)
+        {
+            ProductIDResultLabel.Text = Program.computers.ProductID.ToString();
+            ConditionResultLabel.Text = Program.computers.Condition;
+            CostResultLabel.Text = Program.computers.Cost.ToString();
+            PlatformResultLabel.Text = Program.computers.Platform;
+            OSResultLabel.Text = Program.computers.OS;
+            ManufacturerResultLabel.Text = Program.computers.Manufacturer;
+            ModelResultLabel.Text = Program.computers.Model;
+        }
     }
 }

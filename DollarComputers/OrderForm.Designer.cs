@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(1006, 721);
             this.ControlBox = false;
             this.Controls.Add(this.BackOrderButton);
             this.Controls.Add(this.FinishOrderButton);
