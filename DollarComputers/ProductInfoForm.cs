@@ -52,5 +52,11 @@ namespace DollarComputers
             Program.Forms[FormName.ORDER_FORM].Show();
             this.Hide();
         }
+
+        private void SelectAnotherProductInfoButton_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.SELECT_FORM].Show();
+            this.Hide();
+        }
     }
 }
