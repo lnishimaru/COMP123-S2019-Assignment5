@@ -68,12 +68,17 @@
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dollarComputersDataSet = new DollarComputers.DollarComputersDataSet();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
             this.productsTableAdapter = new DollarComputers.DollarComputersDataSetTableAdapters.productsTableAdapter();
             this.SelectedItemTextBox = new System.Windows.Forms.TextBox();
+            this.SelectFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
+            this.SelectFormMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // SelectionLabel
@@ -89,7 +94,7 @@
             // YourSelectionLabel
             // 
             this.YourSelectionLabel.AutoSize = true;
-            this.YourSelectionLabel.Location = new System.Drawing.Point(6, 683);
+            this.YourSelectionLabel.Location = new System.Drawing.Point(6, 547);
             this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YourSelectionLabel.Name = "YourSelectionLabel";
             this.YourSelectionLabel.Size = new System.Drawing.Size(177, 29);
@@ -98,7 +103,7 @@
             // 
             // CancelSelectButton
             // 
-            this.CancelSelectButton.Location = new System.Drawing.Point(780, 677);
+            this.CancelSelectButton.Location = new System.Drawing.Point(780, 541);
             this.CancelSelectButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelSelectButton.Name = "CancelSelectButton";
             this.CancelSelectButton.Size = new System.Drawing.Size(105, 40);
@@ -109,7 +114,7 @@
             // 
             // NextSelectButton
             // 
-            this.NextSelectButton.Location = new System.Drawing.Point(890, 677);
+            this.NextSelectButton.Location = new System.Drawing.Point(890, 541);
             this.NextSelectButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextSelectButton.Name = "NextSelectButton";
             this.NextSelectButton.Size = new System.Drawing.Size(105, 40);
@@ -163,7 +168,7 @@
             this.SelectionDataGridView.ReadOnly = true;
             this.SelectionDataGridView.RowHeadersWidth = 51;
             this.SelectionDataGridView.RowTemplate.Height = 24;
-            this.SelectionDataGridView.Size = new System.Drawing.Size(1002, 593);
+            this.SelectionDataGridView.Size = new System.Drawing.Size(1002, 468);
             this.SelectionDataGridView.TabIndex = 5;
             this.SelectionDataGridView.SelectionChanged += new System.EventHandler(this.SelectionDataGridView_SelectionChanged);
             // 
@@ -456,15 +461,6 @@
             this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
             this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(1006, 25);
-            this.fillByToolStrip.TabIndex = 6;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
             // productsTableAdapter
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
@@ -477,28 +473,68 @@
             this.SelectedItemTextBox.BackColor = System.Drawing.Color.White;
             this.SelectedItemTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SelectedItemTextBox.Enabled = false;
-            this.SelectedItemTextBox.Location = new System.Drawing.Point(188, 683);
+            this.SelectedItemTextBox.Location = new System.Drawing.Point(188, 547);
             this.SelectedItemTextBox.Name = "SelectedItemTextBox";
             this.SelectedItemTextBox.ReadOnly = true;
             this.SelectedItemTextBox.Size = new System.Drawing.Size(578, 27);
             this.SelectedItemTextBox.TabIndex = 7;
             // 
+            // SelectFormMenuStrip
+            // 
+            this.SelectFormMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.SelectFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.SelectFormMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.SelectFormMenuStrip.Name = "SelectFormMenuStrip";
+            this.SelectFormMenuStrip.Size = new System.Drawing.Size(1006, 28);
+            this.SelectFormMenuStrip.TabIndex = 8;
+            this.SelectFormMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.printToolStripMenuItem.Text = "Print";
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.editToolStripMenuItem.Text = "&Edit";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(1006, 593);
             this.ControlBox = false;
             this.Controls.Add(this.SelectedItemTextBox);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.SelectionDataGridView);
             this.Controls.Add(this.NextSelectButton);
             this.Controls.Add(this.CancelSelectButton);
             this.Controls.Add(this.YourSelectionLabel);
             this.Controls.Add(this.SelectionLabel);
+            this.Controls.Add(this.SelectFormMenuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.SelectFormMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.Name = "SelectForm";
@@ -508,6 +544,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
+            this.SelectFormMenuStrip.ResumeLayout(false);
+            this.SelectFormMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,7 +592,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mousttypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
         private System.Windows.Forms.TextBox SelectedItemTextBox;
+        private System.Windows.Forms.MenuStrip SelectFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

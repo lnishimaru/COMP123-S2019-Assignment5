@@ -57,8 +57,21 @@ namespace DollarComputers
 
             Program.computers.ProductID = int.Parse(cells[(int)ComputersFields.PRODUCT_ID].Value.ToString());
             Program.computers.Cost = double.Parse(cells[(int)ComputersFields.COST].Value.ToString());
+            Program.computers.Condition = cells[(int)ComputersFields.CONDITION].Value.ToString();
             Program.computers.Manufacturer = cells[(int)ComputersFields.MANUFACTURER].Value.ToString();
             Program.computers.Model = cells[(int)ComputersFields.MODEL].Value.ToString();
+            Program.computers.RAMSize = cells[(int)ComputersFields.RAM_SIZE].Value.ToString();
+            Program.computers.Platform = cells[(int)ComputersFields.PLATFORM].Value.ToString();
+            Program.computers.OS = cells[(int)ComputersFields.OS].Value.ToString();
+            Program.computers.RAMSize = cells[(int)ComputersFields.RAM_SIZE].Value.ToString();
+            Program.computers.CPUNumber = cells[(int)ComputersFields.CPU_NUMBER].Value.ToString();
+            Program.computers.ScreenSize = cells[(int)ComputersFields.SCREEN_SIZE].Value.ToString();
+            Program.computers.HDDSize = cells[(int)ComputersFields.HDD_SIZE].Value.ToString();
+            Program.computers.CPUBrand = cells[(int)ComputersFields.CPU_BRAND].Value.ToString();
+            Program.computers.GPUType = cells[(int)ComputersFields.GPU_TYPE].Value.ToString();
+            Program.computers.CPUType = cells[(int)ComputersFields.CPU_TYPE].Value.ToString();
+            Program.computers.CPUSpeed = cells[(int)ComputersFields.CPU_SPEED].Value.ToString();
+            Program.computers.WebCam = cells[(int)ComputersFields.WEBCAM].Value.ToString();
         }
 
         private void NextSelectButton_Click(object sender, EventArgs e)

@@ -26,11 +26,20 @@ namespace DollarComputers
         {
             ProductIDResultLabel.Text = Program.computers.ProductID.ToString();
             ConditionResultLabel.Text = Program.computers.Condition;
-            CostResultLabel.Text = Program.computers.Cost.ToString();
+            CostResultLabel.Text = "$ " + Program.computers.Cost.ToString();
             PlatformResultLabel.Text = Program.computers.Platform;
             OSResultLabel.Text = Program.computers.OS;
             ManufacturerResultLabel.Text = Program.computers.Manufacturer;
             ModelResultLabel.Text = Program.computers.Model;
+            MemoryResultLabel.Text = Program.computers.RAMSize;
+            LCDSizeResultLabel.Text = Program.computers.ScreenSize;
+            HDDResultLabel.Text = Program.computers.HDDSize;
+            CPUBrandResultLabel.Text = Program.computers.CPUBrand;
+            CPUNumberResultLabel.Text = Program.computers.CPUNumber;
+            GPUTypeResultLabel.Text = Program.computers.GPUType;
+            CPUTypeResultLabel.Text = Program.computers.CPUType;
+            CPUSpeedResultLabel.Text = Program.computers.CPUSpeed;
+            WebCamResultLabel.Text = Program.computers.WebCam;
         }
 
         private void CancelProductInfoButton_Click(object sender, EventArgs e)

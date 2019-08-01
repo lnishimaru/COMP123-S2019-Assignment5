@@ -36,7 +36,7 @@
             // 
             // FinishOrderButton
             // 
-            this.FinishOrderButton.Location = new System.Drawing.Point(890, 670);
+            this.FinishOrderButton.Location = new System.Drawing.Point(890, 540);
             this.FinishOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.FinishOrderButton.Name = "FinishOrderButton";
             this.FinishOrderButton.Size = new System.Drawing.Size(105, 40);
@@ -46,7 +46,7 @@
             // 
             // CancelOrderButton
             // 
-            this.CancelOrderButton.Location = new System.Drawing.Point(783, 670);
+            this.CancelOrderButton.Location = new System.Drawing.Point(783, 540);
             this.CancelOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelOrderButton.Name = "CancelOrderButton";
             this.CancelOrderButton.Size = new System.Drawing.Size(105, 40);
@@ -57,7 +57,7 @@
             // 
             // BackOrderButton
             // 
-            this.BackOrderButton.Location = new System.Drawing.Point(675, 670);
+            this.BackOrderButton.Location = new System.Drawing.Point(675, 540);
             this.BackOrderButton.Margin = new System.Windows.Forms.Padding(2);
             this.BackOrderButton.Name = "BackOrderButton";
             this.BackOrderButton.Size = new System.Drawing.Size(105, 40);
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(1006, 593);
             this.ControlBox = false;
             this.Controls.Add(this.BackOrderButton);
             this.Controls.Add(this.FinishOrderButton);

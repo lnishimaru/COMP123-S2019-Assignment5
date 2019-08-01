@@ -20,6 +20,7 @@ namespace DollarComputers
         CPU_CLASS,
         CPU_BRAND,
         CPU_TYPE,
+        CPU_SPEED,
         CPU_NUMBER,
         CONDITION,
         OS,
