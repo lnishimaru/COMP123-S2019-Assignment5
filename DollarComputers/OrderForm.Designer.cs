@@ -41,16 +41,9 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderGroupBox = new System.Windows.Forms.GroupBox();
-            this.ProductInfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.PlatformOrderLabel = new System.Windows.Forms.Label();
-            this.ModelOrderResultLabel = new System.Windows.Forms.Label();
-            this.ManufacturerOrderLabel = new System.Windows.Forms.Label();
-            this.ConditionOrderResultLabel = new System.Windows.Forms.Label();
-            this.ModelOrderLabel = new System.Windows.Forms.Label();
-            this.PlatformOrderResultLabel = new System.Windows.Forms.Label();
-            this.ManufacturerOrderResultLabel = new System.Windows.Forms.Label();
-            this.ConditionLabelOrderForm = new System.Windows.Forms.Label();
             this.OrderTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.OSOrderResultLabel = new System.Windows.Forms.Label();
+            this.OSLabel = new System.Windows.Forms.Label();
             this.LCDSizeLabel = new System.Windows.Forms.Label();
             this.MemoryLabel = new System.Windows.Forms.Label();
             this.CPUBrandLabel = new System.Windows.Forms.Label();
@@ -60,7 +53,6 @@
             this.HDDLabel = new System.Windows.Forms.Label();
             this.GPUTypeLabel = new System.Windows.Forms.Label();
             this.WebCamLabel = new System.Windows.Forms.Label();
-            this.OSLabel = new System.Windows.Forms.Label();
             this.LCDSizeOrderResultLabel = new System.Windows.Forms.Label();
             this.MemoryOrderResultLabel = new System.Windows.Forms.Label();
             this.CPUBrandOrderResultLabel = new System.Windows.Forms.Label();
@@ -70,25 +62,33 @@
             this.CPUSpeedOrderResultLabel = new System.Windows.Forms.Label();
             this.GPUTypeOrderResultLabel = new System.Windows.Forms.Label();
             this.WebCamOrderResultLabel = new System.Windows.Forms.Label();
-            this.OSOrderResultLabel = new System.Windows.Forms.Label();
+            this.ProductInfoTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ModelOrderResultLabel = new System.Windows.Forms.Label();
+            this.ConditionLabelOrderForm = new System.Windows.Forms.Label();
+            this.ManufacturerOrderLabel = new System.Windows.Forms.Label();
+            this.ConditionOrderResultLabel = new System.Windows.Forms.Label();
+            this.ManufacturerOrderResultLabel = new System.Windows.Forms.Label();
+            this.ModelOrderLabel = new System.Windows.Forms.Label();
+            this.PlatformOrderLabel = new System.Windows.Forms.Label();
+            this.PlatformOrderResultLabel = new System.Windows.Forms.Label();
             this.OrderPicture = new System.Windows.Forms.PictureBox();
             this.YourPriceGroupBox = new System.Windows.Forms.GroupBox();
-            this.PriceOrderLabel = new System.Windows.Forms.Label();
-            this.TaxOrderLabel = new System.Windows.Forms.Label();
-            this.TotalOrderLabel = new System.Windows.Forms.Label();
-            this.PriceTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.PriceOrderResultLabel = new System.Windows.Forms.Label();
-            this.TaxOrderResultLabel = new System.Windows.Forms.Label();
             this.TotalTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.TotalOrderResultLabel = new System.Windows.Forms.Label();
+            this.TotalOrderLabel = new System.Windows.Forms.Label();
+            this.PriceTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TaxOrderResultLabel = new System.Windows.Forms.Label();
+            this.PriceOrderResultLabel = new System.Windows.Forms.Label();
+            this.PriceOrderLabel = new System.Windows.Forms.Label();
+            this.TaxOrderLabel = new System.Windows.Forms.Label();
             this.OrderMenuStrip.SuspendLayout();
             this.OrderGroupBox.SuspendLayout();
-            this.ProductInfoTableLayoutPanel.SuspendLayout();
             this.OrderTableLayoutPanel.SuspendLayout();
+            this.ProductInfoTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPicture)).BeginInit();
             this.YourPriceGroupBox.SuspendLayout();
-            this.PriceTableLayoutPanel.SuspendLayout();
             this.TotalTableLayoutPanel.SuspendLayout();
+            this.PriceTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // FinishOrderButton
@@ -156,6 +156,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelOrderButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -170,6 +171,7 @@
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.backToolStripMenuItem.Text = "&Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackOrderButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -184,6 +186,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // OrderGroupBox
             // 
@@ -195,126 +198,6 @@
             this.OrderGroupBox.TabIndex = 11;
             this.OrderGroupBox.TabStop = false;
             this.OrderGroupBox.Text = "System Components";
-            // 
-            // ProductInfoTableLayoutPanel
-            // 
-            this.ProductInfoTableLayoutPanel.ColumnCount = 4;
-            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.84472F));
-            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.63975F));
-            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.77019F));
-            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.59006F));
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ModelOrderResultLabel, 3, 1);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ConditionLabelOrderForm, 0, 0);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ManufacturerOrderLabel, 0, 1);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ConditionOrderResultLabel, 1, 0);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ManufacturerOrderResultLabel, 1, 1);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.ModelOrderLabel, 2, 1);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.PlatformOrderLabel, 2, 0);
-            this.ProductInfoTableLayoutPanel.Controls.Add(this.PlatformOrderResultLabel, 3, 0);
-            this.ProductInfoTableLayoutPanel.Location = new System.Drawing.Point(8, 40);
-            this.ProductInfoTableLayoutPanel.Name = "ProductInfoTableLayoutPanel";
-            this.ProductInfoTableLayoutPanel.RowCount = 2;
-            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.ProductInfoTableLayoutPanel.Size = new System.Drawing.Size(644, 100);
-            this.ProductInfoTableLayoutPanel.TabIndex = 13;
-            // 
-            // PlatformOrderLabel
-            // 
-            this.PlatformOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlatformOrderLabel.AutoSize = true;
-            this.PlatformOrderLabel.Location = new System.Drawing.Point(341, 0);
-            this.PlatformOrderLabel.Name = "PlatformOrderLabel";
-            this.PlatformOrderLabel.Size = new System.Drawing.Size(102, 50);
-            this.PlatformOrderLabel.TabIndex = 4;
-            this.PlatformOrderLabel.Text = "Platform";
-            this.PlatformOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ModelOrderResultLabel
-            // 
-            this.ModelOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModelOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.ModelOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ModelOrderResultLabel.Location = new System.Drawing.Point(449, 60);
-            this.ModelOrderResultLabel.Name = "ModelOrderResultLabel";
-            this.ModelOrderResultLabel.Size = new System.Drawing.Size(192, 29);
-            this.ModelOrderResultLabel.TabIndex = 11;
-            this.ModelOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ManufacturerOrderLabel
-            // 
-            this.ManufacturerOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ManufacturerOrderLabel.AutoSize = true;
-            this.ManufacturerOrderLabel.Location = new System.Drawing.Point(3, 50);
-            this.ManufacturerOrderLabel.Name = "ManufacturerOrderLabel";
-            this.ManufacturerOrderLabel.Size = new System.Drawing.Size(154, 50);
-            this.ManufacturerOrderLabel.TabIndex = 8;
-            this.ManufacturerOrderLabel.Text = "Manufacturer";
-            this.ManufacturerOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ConditionOrderResultLabel
-            // 
-            this.ConditionOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConditionOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.ConditionOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ConditionOrderResultLabel.Location = new System.Drawing.Point(163, 10);
-            this.ConditionOrderResultLabel.Name = "ConditionOrderResultLabel";
-            this.ConditionOrderResultLabel.Size = new System.Drawing.Size(172, 29);
-            this.ConditionOrderResultLabel.TabIndex = 7;
-            this.ConditionOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ModelOrderLabel
-            // 
-            this.ModelOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModelOrderLabel.AutoSize = true;
-            this.ModelOrderLabel.Location = new System.Drawing.Point(341, 50);
-            this.ModelOrderLabel.Name = "ModelOrderLabel";
-            this.ModelOrderLabel.Size = new System.Drawing.Size(102, 50);
-            this.ModelOrderLabel.TabIndex = 10;
-            this.ModelOrderLabel.Text = "Model";
-            this.ModelOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // PlatformOrderResultLabel
-            // 
-            this.PlatformOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlatformOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.PlatformOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PlatformOrderResultLabel.Location = new System.Drawing.Point(449, 10);
-            this.PlatformOrderResultLabel.Name = "PlatformOrderResultLabel";
-            this.PlatformOrderResultLabel.Size = new System.Drawing.Size(192, 29);
-            this.PlatformOrderResultLabel.TabIndex = 5;
-            this.PlatformOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ManufacturerOrderResultLabel
-            // 
-            this.ManufacturerOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ManufacturerOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.ManufacturerOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ManufacturerOrderResultLabel.Location = new System.Drawing.Point(163, 60);
-            this.ManufacturerOrderResultLabel.Name = "ManufacturerOrderResultLabel";
-            this.ManufacturerOrderResultLabel.Size = new System.Drawing.Size(172, 29);
-            this.ManufacturerOrderResultLabel.TabIndex = 9;
-            this.ManufacturerOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ConditionLabelOrderForm
-            // 
-            this.ConditionLabelOrderForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConditionLabelOrderForm.AutoSize = true;
-            this.ConditionLabelOrderForm.Location = new System.Drawing.Point(3, 0);
-            this.ConditionLabelOrderForm.Name = "ConditionLabelOrderForm";
-            this.ConditionLabelOrderForm.Size = new System.Drawing.Size(154, 50);
-            this.ConditionLabelOrderForm.TabIndex = 6;
-            this.ConditionLabelOrderForm.Text = "Condition";
-            this.ConditionLabelOrderForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // OrderTableLayoutPanel
             // 
@@ -356,6 +239,32 @@
             this.OrderTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.OrderTableLayoutPanel.Size = new System.Drawing.Size(641, 274);
             this.OrderTableLayoutPanel.TabIndex = 14;
+            // 
+            // OSOrderResultLabel
+            // 
+            this.OSOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OSOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.OSOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OSOrderResultLabel.Location = new System.Drawing.Point(165, 243);
+            this.OSOrderResultLabel.Name = "OSOrderResultLabel";
+            this.OSOrderResultLabel.Size = new System.Drawing.Size(473, 31);
+            this.OSOrderResultLabel.TabIndex = 22;
+            this.OSOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // OSLabel
+            // 
+            this.OSLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OSLabel.AutoSize = true;
+            this.OSLabel.Location = new System.Drawing.Point(3, 243);
+            this.OSLabel.Name = "OSLabel";
+            this.OSLabel.Size = new System.Drawing.Size(156, 31);
+            this.OSLabel.TabIndex = 16;
+            this.OSLabel.Text = "OS";
+            this.OSLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LCDSizeLabel
             // 
@@ -474,19 +383,6 @@
             this.WebCamLabel.Text = "Web Cam";
             this.WebCamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // OSLabel
-            // 
-            this.OSLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OSLabel.AutoSize = true;
-            this.OSLabel.Location = new System.Drawing.Point(3, 243);
-            this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(156, 31);
-            this.OSLabel.TabIndex = 16;
-            this.OSLabel.Text = "OS";
-            this.OSLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // LCDSizeOrderResultLabel
             // 
             this.LCDSizeOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -604,18 +500,125 @@
             this.WebCamOrderResultLabel.TabIndex = 25;
             this.WebCamOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // OSOrderResultLabel
+            // ProductInfoTableLayoutPanel
             // 
-            this.OSOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ProductInfoTableLayoutPanel.ColumnCount = 4;
+            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.84472F));
+            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.63975F));
+            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.77019F));
+            this.ProductInfoTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.59006F));
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ModelOrderResultLabel, 3, 1);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ConditionLabelOrderForm, 0, 0);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ManufacturerOrderLabel, 0, 1);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ConditionOrderResultLabel, 1, 0);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ManufacturerOrderResultLabel, 1, 1);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.ModelOrderLabel, 2, 1);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.PlatformOrderLabel, 2, 0);
+            this.ProductInfoTableLayoutPanel.Controls.Add(this.PlatformOrderResultLabel, 3, 0);
+            this.ProductInfoTableLayoutPanel.Location = new System.Drawing.Point(8, 40);
+            this.ProductInfoTableLayoutPanel.Name = "ProductInfoTableLayoutPanel";
+            this.ProductInfoTableLayoutPanel.RowCount = 2;
+            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ProductInfoTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.ProductInfoTableLayoutPanel.Size = new System.Drawing.Size(644, 100);
+            this.ProductInfoTableLayoutPanel.TabIndex = 13;
+            // 
+            // ModelOrderResultLabel
+            // 
+            this.ModelOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ModelOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.ModelOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ModelOrderResultLabel.Location = new System.Drawing.Point(449, 60);
+            this.ModelOrderResultLabel.Name = "ModelOrderResultLabel";
+            this.ModelOrderResultLabel.Size = new System.Drawing.Size(192, 29);
+            this.ModelOrderResultLabel.TabIndex = 11;
+            this.ModelOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ConditionLabelOrderForm
+            // 
+            this.ConditionLabelOrderForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OSOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.OSOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.OSOrderResultLabel.Location = new System.Drawing.Point(165, 243);
-            this.OSOrderResultLabel.Name = "OSOrderResultLabel";
-            this.OSOrderResultLabel.Size = new System.Drawing.Size(473, 31);
-            this.OSOrderResultLabel.TabIndex = 22;
-            this.OSOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConditionLabelOrderForm.AutoSize = true;
+            this.ConditionLabelOrderForm.Location = new System.Drawing.Point(3, 0);
+            this.ConditionLabelOrderForm.Name = "ConditionLabelOrderForm";
+            this.ConditionLabelOrderForm.Size = new System.Drawing.Size(154, 50);
+            this.ConditionLabelOrderForm.TabIndex = 6;
+            this.ConditionLabelOrderForm.Text = "Condition";
+            this.ConditionLabelOrderForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ManufacturerOrderLabel
+            // 
+            this.ManufacturerOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ManufacturerOrderLabel.AutoSize = true;
+            this.ManufacturerOrderLabel.Location = new System.Drawing.Point(3, 50);
+            this.ManufacturerOrderLabel.Name = "ManufacturerOrderLabel";
+            this.ManufacturerOrderLabel.Size = new System.Drawing.Size(154, 50);
+            this.ManufacturerOrderLabel.TabIndex = 8;
+            this.ManufacturerOrderLabel.Text = "Manufacturer";
+            this.ManufacturerOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ConditionOrderResultLabel
+            // 
+            this.ConditionOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConditionOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.ConditionOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ConditionOrderResultLabel.Location = new System.Drawing.Point(163, 10);
+            this.ConditionOrderResultLabel.Name = "ConditionOrderResultLabel";
+            this.ConditionOrderResultLabel.Size = new System.Drawing.Size(172, 29);
+            this.ConditionOrderResultLabel.TabIndex = 7;
+            this.ConditionOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ManufacturerOrderResultLabel
+            // 
+            this.ManufacturerOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ManufacturerOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.ManufacturerOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ManufacturerOrderResultLabel.Location = new System.Drawing.Point(163, 60);
+            this.ManufacturerOrderResultLabel.Name = "ManufacturerOrderResultLabel";
+            this.ManufacturerOrderResultLabel.Size = new System.Drawing.Size(172, 29);
+            this.ManufacturerOrderResultLabel.TabIndex = 9;
+            this.ManufacturerOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ModelOrderLabel
+            // 
+            this.ModelOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ModelOrderLabel.AutoSize = true;
+            this.ModelOrderLabel.Location = new System.Drawing.Point(341, 50);
+            this.ModelOrderLabel.Name = "ModelOrderLabel";
+            this.ModelOrderLabel.Size = new System.Drawing.Size(102, 50);
+            this.ModelOrderLabel.TabIndex = 10;
+            this.ModelOrderLabel.Text = "Model";
+            this.ModelOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PlatformOrderLabel
+            // 
+            this.PlatformOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PlatformOrderLabel.AutoSize = true;
+            this.PlatformOrderLabel.Location = new System.Drawing.Point(341, 0);
+            this.PlatformOrderLabel.Name = "PlatformOrderLabel";
+            this.PlatformOrderLabel.Size = new System.Drawing.Size(102, 50);
+            this.PlatformOrderLabel.TabIndex = 4;
+            this.PlatformOrderLabel.Text = "Platform";
+            this.PlatformOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PlatformOrderResultLabel
+            // 
+            this.PlatformOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PlatformOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.PlatformOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PlatformOrderResultLabel.Location = new System.Drawing.Point(449, 10);
+            this.PlatformOrderResultLabel.Name = "PlatformOrderResultLabel";
+            this.PlatformOrderResultLabel.Size = new System.Drawing.Size(192, 29);
+            this.PlatformOrderResultLabel.TabIndex = 5;
+            this.PlatformOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // OrderPicture
             // 
@@ -636,31 +639,31 @@
             this.YourPriceGroupBox.TabStop = false;
             this.YourPriceGroupBox.Text = "Your Price";
             // 
-            // PriceOrderLabel
+            // TotalTableLayoutPanel
             // 
-            this.PriceOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PriceOrderLabel.AutoSize = true;
-            this.PriceOrderLabel.Location = new System.Drawing.Point(3, 0);
-            this.PriceOrderLabel.Name = "PriceOrderLabel";
-            this.PriceOrderLabel.Size = new System.Drawing.Size(140, 50);
-            this.PriceOrderLabel.TabIndex = 8;
-            this.PriceOrderLabel.Text = "Price";
-            this.PriceOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TotalTableLayoutPanel.ColumnCount = 2;
+            this.TotalTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TotalTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderResultLabel, 1, 0);
+            this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderLabel, 0, 0);
+            this.TotalTableLayoutPanel.Location = new System.Drawing.Point(7, 189);
+            this.TotalTableLayoutPanel.Name = "TotalTableLayoutPanel";
+            this.TotalTableLayoutPanel.RowCount = 1;
+            this.TotalTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TotalTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.TotalTableLayoutPanel.Size = new System.Drawing.Size(292, 54);
+            this.TotalTableLayoutPanel.TabIndex = 12;
             // 
-            // TaxOrderLabel
+            // TotalOrderResultLabel
             // 
-            this.TaxOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TaxOrderLabel.AutoSize = true;
-            this.TaxOrderLabel.Location = new System.Drawing.Point(3, 50);
-            this.TaxOrderLabel.Name = "TaxOrderLabel";
-            this.TaxOrderLabel.Size = new System.Drawing.Size(140, 50);
-            this.TaxOrderLabel.TabIndex = 9;
-            this.TaxOrderLabel.Text = "Sales Tax (13%)";
-            this.TaxOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TotalOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotalOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.TotalOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TotalOrderResultLabel.Location = new System.Drawing.Point(149, 12);
+            this.TotalOrderResultLabel.Name = "TotalOrderResultLabel";
+            this.TotalOrderResultLabel.Size = new System.Drawing.Size(140, 29);
+            this.TotalOrderResultLabel.TabIndex = 14;
+            this.TotalOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TotalOrderLabel
             // 
@@ -692,17 +695,6 @@
             this.PriceTableLayoutPanel.Size = new System.Drawing.Size(293, 100);
             this.PriceTableLayoutPanel.TabIndex = 11;
             // 
-            // PriceOrderResultLabel
-            // 
-            this.PriceOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PriceOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.PriceOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PriceOrderResultLabel.Location = new System.Drawing.Point(149, 10);
-            this.PriceOrderResultLabel.Name = "PriceOrderResultLabel";
-            this.PriceOrderResultLabel.Size = new System.Drawing.Size(141, 29);
-            this.PriceOrderResultLabel.TabIndex = 12;
-            this.PriceOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // TaxOrderResultLabel
             // 
             this.TaxOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -714,31 +706,42 @@
             this.TaxOrderResultLabel.TabIndex = 13;
             this.TaxOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TotalTableLayoutPanel
+            // PriceOrderResultLabel
             // 
-            this.TotalTableLayoutPanel.ColumnCount = 2;
-            this.TotalTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TotalTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderResultLabel, 1, 0);
-            this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderLabel, 0, 0);
-            this.TotalTableLayoutPanel.Location = new System.Drawing.Point(7, 189);
-            this.TotalTableLayoutPanel.Name = "TotalTableLayoutPanel";
-            this.TotalTableLayoutPanel.RowCount = 1;
-            this.TotalTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TotalTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TotalTableLayoutPanel.Size = new System.Drawing.Size(292, 54);
-            this.TotalTableLayoutPanel.TabIndex = 12;
+            this.PriceOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PriceOrderResultLabel.BackColor = System.Drawing.Color.White;
+            this.PriceOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PriceOrderResultLabel.Location = new System.Drawing.Point(149, 10);
+            this.PriceOrderResultLabel.Name = "PriceOrderResultLabel";
+            this.PriceOrderResultLabel.Size = new System.Drawing.Size(141, 29);
+            this.PriceOrderResultLabel.TabIndex = 12;
+            this.PriceOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TotalOrderResultLabel
+            // PriceOrderLabel
             // 
-            this.TotalOrderResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TotalOrderResultLabel.BackColor = System.Drawing.Color.White;
-            this.TotalOrderResultLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TotalOrderResultLabel.Location = new System.Drawing.Point(149, 12);
-            this.TotalOrderResultLabel.Name = "TotalOrderResultLabel";
-            this.TotalOrderResultLabel.Size = new System.Drawing.Size(140, 29);
-            this.TotalOrderResultLabel.TabIndex = 14;
-            this.TotalOrderResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PriceOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PriceOrderLabel.AutoSize = true;
+            this.PriceOrderLabel.Location = new System.Drawing.Point(3, 0);
+            this.PriceOrderLabel.Name = "PriceOrderLabel";
+            this.PriceOrderLabel.Size = new System.Drawing.Size(140, 50);
+            this.PriceOrderLabel.TabIndex = 8;
+            this.PriceOrderLabel.Text = "Price";
+            this.PriceOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // TaxOrderLabel
+            // 
+            this.TaxOrderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TaxOrderLabel.AutoSize = true;
+            this.TaxOrderLabel.Location = new System.Drawing.Point(3, 50);
+            this.TaxOrderLabel.Name = "TaxOrderLabel";
+            this.TaxOrderLabel.Size = new System.Drawing.Size(140, 50);
+            this.TaxOrderLabel.TabIndex = 9;
+            this.TaxOrderLabel.Text = "Sales Tax (13%)";
+            this.TaxOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // OrderForm
             // 
@@ -764,16 +767,16 @@
             this.OrderMenuStrip.ResumeLayout(false);
             this.OrderMenuStrip.PerformLayout();
             this.OrderGroupBox.ResumeLayout(false);
-            this.ProductInfoTableLayoutPanel.ResumeLayout(false);
-            this.ProductInfoTableLayoutPanel.PerformLayout();
             this.OrderTableLayoutPanel.ResumeLayout(false);
             this.OrderTableLayoutPanel.PerformLayout();
+            this.ProductInfoTableLayoutPanel.ResumeLayout(false);
+            this.ProductInfoTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderPicture)).EndInit();
             this.YourPriceGroupBox.ResumeLayout(false);
-            this.PriceTableLayoutPanel.ResumeLayout(false);
-            this.PriceTableLayoutPanel.PerformLayout();
             this.TotalTableLayoutPanel.ResumeLayout(false);
             this.TotalTableLayoutPanel.PerformLayout();
+            this.PriceTableLayoutPanel.ResumeLayout(false);
+            this.PriceTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

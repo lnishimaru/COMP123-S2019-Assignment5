@@ -30,6 +30,7 @@ namespace DollarComputers
             Forms.Add(FormName.SELECT_FORM, new SelectForm());
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
+            Forms.Add(FormName.ABOUT_FORM, new AboutForm());
 
             Application.Run(Forms[FormName.SPLASH_SCREEN]);
 

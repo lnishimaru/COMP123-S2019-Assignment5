@@ -13,6 +13,7 @@ namespace DollarComputers
         SELECT_FORM,
         PRODUCT_INFO_FORM,
         ORDER_FORM,
+        ABOUT_FORM,
         NUM_OF_FORMS
     }
 }

@@ -48,5 +48,14 @@ namespace DollarComputers
             OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\Assignment5\\Acer.jpg");
             OrderPicture.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+        /// <summary>
+        /// Event Handler to the About Strip Menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormName.ABOUT_FORM].ShowDialog();
+        }
     }
 }
