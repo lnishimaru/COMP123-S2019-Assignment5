@@ -35,6 +35,12 @@
             this.CancelSelectButton = new System.Windows.Forms.Button();
             this.NextSelectButton = new System.Windows.Forms.Button();
             this.SelectionDataGridView = new System.Windows.Forms.DataGridView();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dollarComputersDataSet = new DollarComputers.DollarComputersDataSet();
+            this.productsTableAdapter = new DollarComputers.DollarComputersDataSetTableAdapters.productsTableAdapter();
+            this.SelectedItemTextBox = new System.Windows.Forms.TextBox();
+            this.dollarComputersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,13 +72,11 @@
             this.mousttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dollarComputersDataSet = new DollarComputers.DollarComputersDataSet();
-            this.productsTableAdapter = new DollarComputers.DollarComputersDataSetTableAdapters.productsTableAdapter();
-            this.SelectedItemTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectionLabel
@@ -121,7 +125,6 @@
             // 
             this.SelectionDataGridView.AllowUserToAddRows = false;
             this.SelectionDataGridView.AllowUserToDeleteRows = false;
-            this.SelectionDataGridView.AllowUserToOrderColumns = true;
             this.SelectionDataGridView.AutoGenerateColumns = false;
             this.SelectionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SelectionDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -156,7 +159,7 @@
             this.mousttypeDataGridViewTextBoxColumn,
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
-            this.SelectionDataGridView.DataSource = this.productsBindingSource;
+            this.SelectionDataGridView.DataSource = this.productsBindingSource1;
             this.SelectionDataGridView.Location = new System.Drawing.Point(4, 68);
             this.SelectionDataGridView.Name = "SelectionDataGridView";
             this.SelectionDataGridView.ReadOnly = true;
@@ -165,6 +168,44 @@
             this.SelectionDataGridView.Size = new System.Drawing.Size(1002, 468);
             this.SelectionDataGridView.TabIndex = 5;
             this.SelectionDataGridView.SelectionChanged += new System.EventHandler(this.SelectionDataGridView_SelectionChanged);
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            this.productsBindingSource.DataSource = this.dollarComputersDataSet;
+            // 
+            // dollarComputersDataSet
+            // 
+            this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
+            this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // SelectedItemTextBox
+            // 
+            this.SelectedItemTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SelectedItemTextBox.BackColor = System.Drawing.Color.White;
+            this.SelectedItemTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SelectedItemTextBox.Enabled = false;
+            this.SelectedItemTextBox.Location = new System.Drawing.Point(188, 547);
+            this.SelectedItemTextBox.Name = "SelectedItemTextBox";
+            this.SelectedItemTextBox.ReadOnly = true;
+            this.SelectedItemTextBox.Size = new System.Drawing.Size(578, 27);
+            this.SelectedItemTextBox.TabIndex = 7;
+            // 
+            // dollarComputersDataSetBindingSource
+            // 
+            this.dollarComputersDataSetBindingSource.DataSource = this.dollarComputersDataSet;
+            this.dollarComputersDataSetBindingSource.Position = 0;
+            // 
+            // productsBindingSource1
+            // 
+            this.productsBindingSource1.DataMember = "products";
+            this.productsBindingSource1.DataSource = this.dollarComputersDataSet;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -445,34 +486,6 @@
             this.webcamDataGridViewTextBoxColumn.ReadOnly = true;
             this.webcamDataGridViewTextBoxColumn.Width = 125;
             // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            this.productsBindingSource.DataSource = this.dollarComputersDataSet;
-            // 
-            // dollarComputersDataSet
-            // 
-            this.dollarComputersDataSet.DataSetName = "DollarComputersDataSet";
-            this.dollarComputersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // SelectedItemTextBox
-            // 
-            this.SelectedItemTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SelectedItemTextBox.BackColor = System.Drawing.Color.White;
-            this.SelectedItemTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SelectedItemTextBox.Enabled = false;
-            this.SelectedItemTextBox.Location = new System.Drawing.Point(188, 547);
-            this.SelectedItemTextBox.Name = "SelectedItemTextBox";
-            this.SelectedItemTextBox.ReadOnly = true;
-            this.SelectedItemTextBox.Size = new System.Drawing.Size(578, 27);
-            this.SelectedItemTextBox.TabIndex = 7;
-            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -497,6 +510,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SelectionDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,6 +527,7 @@
         private DollarComputersDataSet dollarComputersDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
         private DollarComputersDataSetTableAdapters.productsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.TextBox SelectedItemTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
@@ -543,6 +559,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mousttypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox SelectedItemTextBox;
+        private System.Windows.Forms.BindingSource productsBindingSource1;
+        private System.Windows.Forms.BindingSource dollarComputersDataSetBindingSource;
     }
 }

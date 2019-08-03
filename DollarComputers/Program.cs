@@ -6,10 +6,9 @@ using System.Windows.Forms;
 
 namespace DollarComputers
 {
-    static class Program
+    public static class Program
     {
         public static Computers computers;
-        public static ComputersFields computerFields;
         public static Dictionary<FormName, Form> Forms;
         /// <summary>
         /// The main entry point for the application.

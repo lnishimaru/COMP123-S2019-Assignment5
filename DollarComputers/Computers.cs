@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DollarComputers
 {
-    enum ComputersFields
+    public enum ComputersFields
     {
         PRODUCT_ID,
         COST,
@@ -43,7 +43,7 @@ namespace DollarComputers
     /// <summary>
     /// Temporary class to storage data from the products between forms and actions
     /// </summary>
-    class Computers
+    public class Computers
     {
         public int ProductID { get; set; }
         public double Cost { get; set; }

@@ -72,11 +72,14 @@
             this.ProductIDLabel = new System.Windows.Forms.Label();
             this.ProductInfoMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProductOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ProductSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoGroupBox.SuspendLayout();
             this.ProductInfoTableLayoutPanel.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
@@ -616,28 +619,40 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem,
-            this.toolStripMenuItem2,
+            this.OpenStripMenuItem,
+            this.SaveStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // openToolStripMenuItem
+            // OpenStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.openToolStripMenuItem.Text = "&Open";
+            this.OpenStripMenuItem.Name = "OpenStripMenuItem";
+            this.OpenStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.OpenStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.OpenStripMenuItem.Text = "&Open";
+            this.OpenStripMenuItem.Click += new System.EventHandler(this.OpenStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // SaveStripMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem2.Text = "&Save";
+            this.SaveStripMenuItem.Name = "SaveStripMenuItem";
+            this.SaveStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.SaveStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SaveStripMenuItem.Text = "&Save";
+            this.SaveStripMenuItem.Click += new System.EventHandler(this.SaveStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelProductInfoButton_Click);
@@ -653,9 +668,14 @@
             // selectAnotherProductToolStripMenuItem
             // 
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
-            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(244, 26);
+            this.selectAnotherProductToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(293, 26);
             this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
             this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductInfoButton_Click);
+            // 
+            // ProductOpenFileDialog
+            // 
+            this.ProductOpenFileDialog.FileName = "openFileDialog1";
             // 
             // ProductInfoForm
             // 
@@ -741,10 +761,13 @@
         private System.Windows.Forms.Label MemoryLabel;
         private System.Windows.Forms.MenuStrip ProductInfoMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem OpenStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SaveStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.OpenFileDialog ProductOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ProductSaveFileDialog;
     }
 }
