@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.FinishOrderButton = new System.Windows.Forms.Button();
             this.CancelOrderButton = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.OrderMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +83,9 @@
             this.PriceOrderResultLabel = new System.Windows.Forms.Label();
             this.PriceOrderLabel = new System.Windows.Forms.Label();
             this.TaxOrderLabel = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.OrderLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.OrderPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.OrderMenuStrip.SuspendLayout();
             this.OrderGroupBox.SuspendLayout();
             this.OrderTableLayoutPanel.SuspendLayout();
@@ -100,6 +105,7 @@
             this.FinishOrderButton.TabIndex = 8;
             this.FinishOrderButton.Text = "Finish";
             this.FinishOrderButton.UseVisualStyleBackColor = true;
+            this.FinishOrderButton.Click += new System.EventHandler(this.FinishOrderButton_Click);
             // 
             // CancelOrderButton
             // 
@@ -140,6 +146,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.printToolStripMenuItem,
+            this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F)));
@@ -152,6 +159,12 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.PrintToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -174,7 +187,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackOrderButton_Click);
             // 
@@ -191,7 +204,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -639,6 +652,7 @@
             // 
             this.YourPriceGroupBox.Controls.Add(this.TotalTableLayoutPanel);
             this.YourPriceGroupBox.Controls.Add(this.PriceTableLayoutPanel);
+            this.YourPriceGroupBox.Controls.Add(this.shapeContainer1);
             this.YourPriceGroupBox.Location = new System.Drawing.Point(689, 252);
             this.YourPriceGroupBox.Name = "YourPriceGroupBox";
             this.YourPriceGroupBox.Size = new System.Drawing.Size(305, 274);
@@ -653,7 +667,7 @@
             this.TotalTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderResultLabel, 1, 0);
             this.TotalTableLayoutPanel.Controls.Add(this.TotalOrderLabel, 0, 0);
-            this.TotalTableLayoutPanel.Location = new System.Drawing.Point(7, 189);
+            this.TotalTableLayoutPanel.Location = new System.Drawing.Point(7, 194);
             this.TotalTableLayoutPanel.Name = "TotalTableLayoutPanel";
             this.TotalTableLayoutPanel.RowCount = 1;
             this.TotalTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -750,6 +764,34 @@
             this.TaxOrderLabel.Text = "Sales Tax (13%)";
             this.TaxOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(3, 30);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.OrderLineShape});
+            this.shapeContainer1.Size = new System.Drawing.Size(299, 241);
+            this.shapeContainer1.TabIndex = 13;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // OrderLineShape
+            // 
+            this.OrderLineShape.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OrderLineShape.Name = "OrderLineShape";
+            this.OrderLineShape.X1 = 7;
+            this.OrderLineShape.X2 = 295;
+            this.OrderLineShape.Y1 = 137;
+            this.OrderLineShape.Y2 = 137;
+            // 
+            // OrderPrintForm
+            // 
+            this.OrderPrintForm.DocumentName = "document";
+            this.OrderPrintForm.Form = this;
+            this.OrderPrintForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
+            this.OrderPrintForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("OrderPrintForm.PrinterSettings")));
+            this.OrderPrintForm.PrintFileName = null;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -843,5 +885,9 @@
         private System.Windows.Forms.Label PriceOrderResultLabel;
         private System.Windows.Forms.Label PriceOrderLabel;
         private System.Windows.Forms.Label TaxOrderLabel;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape OrderLineShape;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm OrderPrintForm;
     }
 }

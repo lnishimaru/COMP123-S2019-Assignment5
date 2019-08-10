@@ -39,6 +39,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -156,6 +158,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Acer.jpg" />
+    <Content Include="images\Acer.jpg" />
+    <Content Include="images\Asus.jpg" />
+    <Content Include="images\Cart.JPG" />
+    <Content Include="images\Cybertron.jpg" />
+    <Content Include="images\dollarcomputers.sql" />
+    <Content Include="images\dollarIcon.ico" />
+    <Content Include="images\dollarLogo.png" />
+    <Content Include="images\Gateway.jpg" />
+    <Content Include="images\hp.jpg" />
+    <Content Include="images\Ibuypower.jpg" />
+    <Content Include="images\icon.ico" />
+    <Content Include="images\Icon.png" />
+    <Content Include="images\imac.jpg" />
+    <Content Include="images\Lenovo.JPG" />
+    <Content Include="images\MacPro.png" />
+    <Content Include="images\ShoppingCart.jpg" />
+    <Content Include="images\Toshiba.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
