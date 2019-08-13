@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Assignment 5 - COMP123 - Summer 2019
+ * name: Lilian Nishimaru de Souza
+ * id  : 301044056 
+ * date: 07/24/2019   
+ */
 namespace DollarComputers
 {
     public partial class OrderForm : Form
@@ -45,7 +50,7 @@ namespace DollarComputers
             CPUTypeOrderResultLabel.Text = Program.computers.CPUType;
             CPUSpeedOrderResultLabel.Text = Program.computers.CPUSpeed;
             WebCamOrderResultLabel.Text = Program.computers.WebCam;
-            LoadImage(Program.computers.Manufacturer);
+            LoadImage(Program.computers.Manufacturer.Trim());
             double tax = Math.Round(Program.computers.Cost * 0.13,2);
             TaxOrderResultLabel.Text = "$ " + tax.ToString("#.00");
             double total = Program.computers.Cost + tax;
@@ -55,9 +60,7 @@ namespace DollarComputers
 
         private void LoadImage(string manufacturer)
         {
-            //string test = manufacturer.ToUpper();
-            
-            switch (manufacturer)
+            switch (manufacturer.ToUpper())
             {
                 case "ACER":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Acer.jpg");
@@ -65,7 +68,7 @@ namespace DollarComputers
                 case "Asus":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Asus.jpg");
                     break;
-                case "CYBERTRON":
+                case "CYBERTRONPC":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Cybertron.jpg");
                     break;
                 case "GATEWAY":
@@ -77,14 +80,11 @@ namespace DollarComputers
                 case "IBUYPOWER":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Ibuypower.jpg");
                     break;
-                case "IMAC":
+                case "APPLE":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\imac.jpg");
                     break;
                 case "LENOVO":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Lenovo.jpg");
-                    break;
-                case "MACPRO":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\MacPro.png");
                     break;
                 case "TOSHIBA":
                     OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Toshiba.JPG");

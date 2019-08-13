@@ -8,7 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * Assignment 5 - COMP123 - Summer 2019
+ * name: Lilian Nishimaru de Souza
+ * id  : 301044056 
+ * date: 07/24/2019   
+ */
 namespace DollarComputers
 {
     public partial class StartForm : Form
