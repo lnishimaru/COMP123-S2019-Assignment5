@@ -22,12 +22,20 @@ namespace DollarComputers
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This method handles the event of closing the Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This method transfer data from the Computer's Class to the labels on Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             ProductIDResultLabel.Text = Program.computers.ProductID.ToString();
@@ -47,24 +55,42 @@ namespace DollarComputers
             CPUSpeedResultLabel.Text = Program.computers.CPUSpeed;
             WebCamResultLabel.Text = Program.computers.WebCam;
         }
-
+        /// <summary>
+        /// This method handles the event for clicking the Cancel button
+        /// and Exit menu option on Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelProductInfoButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This method handles the event for clicking the Next button on Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextProductInfoButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.ORDER_FORM].Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This method handles the event for clicking the Select Another Product
+        /// and the Select Another Product menu option on Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAnotherProductInfoButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.SELECT_FORM].Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// this method handles the Save file from Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
     private void SaveStripMenuItem_Click(object sender, EventArgs e)
     {
         //configuring the dialog
@@ -107,7 +133,11 @@ namespace DollarComputers
             MessageBox.Show("File Saved", "Saving...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-
+        /// <summary>
+        /// This method handles the Open Saved File from Product Info Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenStripMenuItem_Click(object sender, EventArgs e)
         {
             //configure open file dialog

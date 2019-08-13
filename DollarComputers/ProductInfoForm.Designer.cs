@@ -528,7 +528,7 @@
             this.ProductIDTableLayoutPanel.Controls.Add(this.ConditionLabel, 2, 0);
             this.ProductIDTableLayoutPanel.Controls.Add(this.ProductIDResultLabel, 1, 0);
             this.ProductIDTableLayoutPanel.Controls.Add(this.ProductIDLabel, 0, 0);
-            this.ProductIDTableLayoutPanel.Location = new System.Drawing.Point(18, 41);
+            this.ProductIDTableLayoutPanel.Location = new System.Drawing.Point(18, 55);
             this.ProductIDTableLayoutPanel.Name = "ProductIDTableLayoutPanel";
             this.ProductIDTableLayoutPanel.RowCount = 1;
             this.ProductIDTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -632,7 +632,7 @@
             // 
             this.OpenStripMenuItem.Name = "OpenStripMenuItem";
             this.OpenStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.OpenStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.OpenStripMenuItem.Text = "&Open";
             this.OpenStripMenuItem.Click += new System.EventHandler(this.OpenStripMenuItem_Click);
             // 
@@ -640,20 +640,20 @@
             // 
             this.SaveStripMenuItem.Name = "SaveStripMenuItem";
             this.SaveStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SaveStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.SaveStripMenuItem.Text = "&Save";
             this.SaveStripMenuItem.Click += new System.EventHandler(this.SaveStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelProductInfoButton_Click);
             // 

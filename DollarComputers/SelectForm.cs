@@ -26,21 +26,15 @@ namespace DollarComputers
         {
             // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
+            //disables the Next button until the client selects one  hardware 
+            NextSelectButton.Enabled = false;
 
         }
-
-        private void FillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.productsTableAdapter.FillBy(this.dollarComputersDataSet.products);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+        /// <summary>
+        /// This method extracts information of the selected hardware
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void SelectionDataGridView_SelectionChanged(object sender, EventArgs e)
         {
@@ -51,7 +45,16 @@ namespace DollarComputers
             var columnCount = SelectionDataGridView.ColumnCount;
 
             SelectionDataGridView.Rows[rowIndex].Selected = true;
-
+            NextSelectButton.Enabled = true;
+            ShowSelectedRow(cells, columnCount);
+        }
+        /// <summary>
+        /// This method assigns the selected hardware to the Computers class
+        /// </summary>
+        /// <param name="cells"></param>
+        /// <param name="columnCount"></param>
+        private void ShowSelectedRow(DataGridViewCellCollection cells, int columnCount)
+        {
             string outputString = string.Empty;
             for (int index = 0; index < columnCount; index++)
             {
@@ -78,13 +81,21 @@ namespace DollarComputers
             Program.computers.CPUSpeed = cells[(int)ComputersFields.CPU_SPEED].Value.ToString();
             Program.computers.WebCam = cells[(int)ComputersFields.WEBCAM].Value.ToString();
         }
-
+        /// <summary>
+        /// This method handles the event for the Next button from the Select Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextSelectButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This method handles the Cancel button from the Select Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelSelectButton_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -21,18 +21,32 @@ namespace DollarComputers
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This method handles the event of clicking the Cancel button
+        /// and the Tool Strip Exit option on Order Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelOrderButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This event handles the event of clicking the Back button and 
+        /// the Back menu on Order Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackOrderButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This method assigns the values on the computer's class to the Order Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             ConditionOrderResultLabel.Text = Program.computers.Condition;
@@ -57,7 +71,10 @@ namespace DollarComputers
             TotalOrderResultLabel.Text = "$ " + total.ToString("#.00");
 
         }
-
+        /// <summary>
+        /// This method assigns the images from each hardware to the order form
+        /// </summary>
+        /// <param name="manufacturer"></param>
         private void LoadImage(string manufacturer)
         {
             switch (manufacturer.ToUpper())
@@ -105,16 +122,24 @@ namespace DollarComputers
         {
             Program.Forms[FormName.ABOUT_FORM].ShowDialog();
         }
-
+        /// <summary>
+        /// This method opens the print options dialog on Order Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OrderPrintForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
             OrderPrintForm.Print();
         }
-
+        /// <summary>
+        /// This event handles the Finish button on Order Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FinishOrderButton_Click(object sender, EventArgs e)
         {
-            DialogResult buttonResult = MessageBox.Show("Thank you for purchasing at Dollar Computers! \n\nYour order will be processed in 7-10 bussiness days.","Place Order", MessageBoxButtons.OK);
+            DialogResult buttonResult = MessageBox.Show("Thank you for shopping with us! \n\nYour order will be processed in 7-10 bussiness days.","Order Confirmed", MessageBoxButtons.OK);
             if (buttonResult == DialogResult.OK)
             {
                 Application.Exit();
