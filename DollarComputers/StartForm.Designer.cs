@@ -79,7 +79,7 @@
             // 
             // CartPictureBox
             // 
-            this.CartPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("CartPictureBox.Image")));
+            this.CartPictureBox.Image = global::DollarComputers.Properties.Resources.ShoppingCart1;
             this.CartPictureBox.Location = new System.Drawing.Point(415, 129);
             this.CartPictureBox.Name = "CartPictureBox";
             this.CartPictureBox.Size = new System.Drawing.Size(200, 178);

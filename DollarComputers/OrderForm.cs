@@ -80,34 +80,34 @@ namespace DollarComputers
             switch (manufacturer.ToUpper())
             {
                 case "ACER":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Acer.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Acer.jpg");
                     break;
                 case "Asus":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Asus.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Asus.jpg");
                     break;
                 case "CYBERTRONPC":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Cybertron.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Cybertron.jpg");
                     break;
                 case "GATEWAY":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Gateway.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Gateway.jpg");
                     break;
                 case "HP":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\HP.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\HP.jpg");
                     break;
                 case "IBUYPOWER":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Ibuypower.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Ibuypower.jpg");
                     break;
                 case "APPLE":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\imac.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\imac.jpg");
                     break;
                 case "LENOVO":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Lenovo.jpg");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Lenovo.jpg");
                     break;
                 case "TOSHIBA":
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\Toshiba.JPG");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\Toshiba.JPG");
                     break;
                 default:
-                    OrderPicture.Image = Image.FromFile("C:\\Users\\Lillis\\Documents\\Centennial\\COMP123\\DollarComputers\\DollarComputers\\images\\dollarLogo.png");
+                    OrderPicture.Image = Image.FromFile("..\\..\\images\\dollarLogo.png");
                     break;
             }
             OrderPicture.SizeMode = PictureBoxSizeMode.StretchImage; 
